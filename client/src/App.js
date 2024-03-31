@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import Gameboard from "./Component/Gameboard";
 import Swal from 'sweetalert2';
 
-export let socket = io("http://localhost:8000");
+export let socket = io("https://realtime-tic-tac-toe.onrender.com");
 
 const App = () => {
   const [isPlayerOnline, setIsPlayerOnline] = useState(false);
