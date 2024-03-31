@@ -39,7 +39,7 @@ const Square = ({id,gameboard,setGameboard,playerturn,setPlayerturn,reset,setRes
       setIcon(null);
       setReset(false);
     }
-  }, [reset]);
+  },[reset,setReset]);
 
   useEffect(() => {
     socket.on("received-move", ({gameboard,SquareId,playerturn}) =>{

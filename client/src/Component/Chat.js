@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { socket } from '../App';
-import {InsertEmoticon,SendSharp} from '@mui/icons-material'
+// import {InsertEmoticon,SendSharp} from '@mui/icons-material'
+import SendIcon from '@mui/icons-material/Send';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
 const Chat = () => {
   const [messages,setMessages] = useState([]);
@@ -47,10 +49,10 @@ const Chat = () => {
         </div>
         <div className='chat_btns_cont'>
             <div className='icon_msg_input-cont'>
-              <button className='smile-icon-btn'><InsertEmoticon/></button>
+              <button className='smile-icon-btn'><InsertEmoticonIcon/></button>
               <input type="text" className="msg_input" placeholder='Type a message' value={inputText} onChange={(e) => setInputText(e.target.value)} onKeyDown={handleEnter}/>
             </div>
-            <button className={`send_btn ${inputText.trim() !== "" ? "typedSomething" : ""}`} onClick={handleSend}><SendSharp sx={{ fontSize: 20 }} className='send_icon'/></button>
+            <button className={`send_btn ${inputText.trim() !== "" ? "typedSomething" : ""}`} onClick={handleSend}><SendIcon sx={{ fontSize: 20 }} className='send_icon'/></button>
         </div>
     </div>
   )
