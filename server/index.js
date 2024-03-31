@@ -6,7 +6,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server,{
     cors:{
-        origin:["https://6609adb066b233f458c1d034--realtime-with-chat-tic-tac-toe.netlify.app/"],
+        origin:["https://realtime-with-chat-tic-tac-toe.netlify.app/"],
     }
 });
 
