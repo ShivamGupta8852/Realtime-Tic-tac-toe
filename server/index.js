@@ -5,12 +5,12 @@ import cors from 'cors';
 
 const app = express();
 app.use(cors({
-    origin : "https://realtime-with-chat-tic-tac-toe.netlify.app/" 
+    origin : "https://realtime-with-chat-tic-tac-toe.netlify.app" 
 }))
 const server = createServer(app);
 const io = new Server(server,{
     cors:{
-        origin:["https://realtime-with-chat-tic-tac-toe.netlify.app/"],
+        origin:["https://realtime-with-chat-tic-tac-toe.netlify.app"],
     }
 });
 
